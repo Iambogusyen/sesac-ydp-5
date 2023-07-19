@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="kor">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form & Input Tag </title>
+</head>
+
+<body>
+    <h1>폼 태그 종류에 대해 알아보자</h1>
+
+    <!-- form tag : 사용자로 부터 입력받는 요소(input, select, textarea)들을 감싸는 태그 
+        form tag의 attribute action, method가 있는데. "서버"와 연관한 내용 -> 추후 소개
+        화면에 드러나지 않는 추상적인 태그 (양식)
+    -->
+    <form>
+        <!-- 모든 input text에는 "name" attribute를 가질 수가 있음 -->
+        Text <input type="text">
+
+        <br>
+        <!-- 웹 접근성에 적합 => 사용자가 편리하게 사용할 수 있다 -->
+        <label for="email">이메일</label>
+
+
+        <br>
+        <!-- textarea : 여러 줄을 입력받는 요소
+            - cols, rows : 가로 세로 길이를 나타냄
+            - 마우스로 textarea 크기 조절 가능 -->
+        <textarea cols="30" rows="10" placeholder="문의 사항을 입력해주세요"></textarea>
+        <input type="email" id="use-email" placeholder="ex@gmail.com">
+
+        <br>
+        <br>
+
+        <input type="color">
+        <input type="range">
+        <input type="file">
+        <input type="number">
+        <input type="date">
+        <input type="datetime-local">
+
+        <br>
+        <!-- checkbox, radio 같은 name 속성 값을 부여해 카테고리화를 해주어야함. -->
+        <!-- checked 속성은 기본으로 체크되어있도록 해줌 -->
+        <h5>당신의 취미는?</h5>
+        <input type="checkbox" name="interest" value="badminton" checked>배드민턴
+        <input type="checkbox" name="interest" value="basketball">농구
+        <input type="checkbox" name="interest" value="movie">영화보기
+        <input type="checkbox" name="interest" value="lay-down">누워있기
+
+        <h5>당신의 성별은?</h5>
+        <input type="radio" name="" gender value="f" checked><label for="genderF"></label>여자 </label>
+        <input type="radio" name="" gender value="m"><label for="genderM"></label>남자 </label>
+
+        <br>
+        <!-- 단순한 버튼 -->
+        <input type="button" value="버튼1">
+        <button type="botton">버튼2</button>
+
+        <br>
+        <!-- 폼은 "제출" 버튼 -->
+        <input type="submit" value="제출">
+        <button type="submit"> 제출2 </button>
+
+        <br>
+        <select name="flower">
+            <!-- 기본적으로는 가장 첫번째의 옵션이 제일 먼저 보이지만.
+            selected 라는 것을 쓰면 가장 먼저 보이게 할 수 있음. -->
+            <optgroup label="red-flower"></optgroup>
+            <!-- 이것은 선택이 되는것은 아님. -->
+            <option value="a">장미</option>
+            <option value="b">동백꽃</option>
+            <option value="c">카네이션</option>
+
+            <optgroup label="white-flower"></optgroup>
+            <option value="a">백합</option>
+            <option value="b">아카시아</option>
+            <option value="c">은방울꽃</option>
+        </select>
+    </form>
+
+    <form>
+        <h2>설문조사</h2>
+        <br>
+        이름 <input type="text">
+        <br>
+        이메일 <input type="email" id="use-email" placeholder="ex@gmail.com">
+
+        <h5>나이</h5>
+        <input type="checkbox" name="age" value="teen" checked> 10대
+        <input type="checkbox" name="age" value="twenty">20대
+        <input type="checkbox" name="age" value="thirty">30대
+        <input type="checkbox" name="age" value="50">40대
+        <input type="checkbox" name="age" value="60">50대
+        <input type="checkbox" name="age" value="70">60대
+
+        <h5>강의</h5>
+        <input type="checkbox" name="lecture" value="html" checked> html
+        <input type="checkbox" name="lecture" value="javascript" checked>javascript
+        <input type="checkbox" name="lecture" value="css">css
+
+        <br>
+
+        <textarea cols="100" rows="50" placeholder="하고 싶은 말을 해주세요"></textarea>
+
+    </form>
+</body>
+
+</html>
