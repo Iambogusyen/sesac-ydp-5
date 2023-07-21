@@ -1,0 +1,31 @@
+/* *: 전체 선택자 */
+* { 
+    color: white;
+}
+/* 태그명: 태그 선택자 */
+body {
+    background-color: gray;
+}
+span {
+    background-color: red;
+}
+/* .클래스명: 클래스 선택자 */
+.second {
+    background-color: green;
+}
+/* #아이디명: 아이디 선택자 */
+#first {
+    background-color: blue;
+}
+
+/* class, id의 차이 
+- class : 그룹
+- id : 고유
+
+ex. "Student" 라는 클래스 값은 여러 요소에 사용 될 수 있음
+    "teacher" 라는 아이디 값은 한 요소에만 사용되어야 함.
+
+    회원가입 할때도 id 가 같으면 안되듯, 고유하게 한개여야만 함.
+
+    class 는 여러개의 요소에서 몇가지만 선택해 같은 값을 넣고자 할때 편리하다.
+*/
