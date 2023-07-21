@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Table </title>
+</head>
+
+<body>
+    <!-- border 가 빨간색 글씨인 이유?
+        선을 그린다? = 꾸민다 -> CSS가 하는것이 바람직 
+    -->
+    <table border="1" width="150" height="150" align="center" bgcolor="skyblue" bordercolor="red">
+        <caption>
+            <h3>My table</h3>
+        </caption>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+    </table>
+
+    <!-- cellspacing, cellpadding -->
+
+    <!-- cellspacing, cellpadding -->
+    <!--
+        cellspacing : border 간격을 조정
+        cellpadding : cell(td요소) 내부 여백을 조정 
+    -->
+    <h1>가격표</h1>
+    <table border="1" cellspacing="10" cellpadding="15">
+        <tr>
+            <!-- th : 테이블의 제목칸을 의미 (bold체) -->
+            <th>메뉴</th>
+            <th>가격</th>
+            <th>비고</th>
+        </tr>
+        <tr>
+            <td>국물떡볶이</td>
+            <td>5000</td>
+            <td>2인 이상 주문 가능</td>
+        </tr>
+        <tr>
+            <td>참치김밥</td>
+            <td>4000</td>
+            <td>x</td>
+        </tr>
+        <tr>
+            <td>치즈김밥</td>
+            <td>4000</td>
+            <td>간, 허파 있음</td>
+        </tr>
+    </table>
+
+    <table border="1" cellspacing="0" cellpadding="15">
+        <tr>
+            <h1>가격표</h1>
+            <th>메뉴</th>
+            <th>가격</th>
+            <th>비고</th>
+        </tr>
+        <tr>
+            <td>국물떡볶이</td>
+            <td>5000</td>
+            <td>2인 이상 주문 가능</td>
+        </tr>
+        <!-- 
+            colspan : 가로합치기
+            rowspan : 세로합치기 
+        -->
+        <tr>
+            <td>참치김밥</td>
+            <!-- rospan="2" 2개의 row를 합치겠습니다 -->
+            <td rowspan="2">4000</td>
+            <td>x</td>
+        </tr>
+        <tr>
+            <td>치즈김밥</td>
+            <td>신메뉴</td>
+        </tr>
+        <tr>
+            <!-- colspan="3" 2개의 col을 합치겠습니다 -->
+            <td colspan="3">순대(품절)</td>
+        </tr>
+    </table>
+
+    <table cellspacing="10" cellpadding="15">
+        <tr>
+            <h1>2019년 6월</h1>
+            <th style="color:red;">일</th>
+            <th>월</th>
+            <th>화</th>
+            <th>수</th>
+            <th>목</th>
+            <th>금</th>
+            <th style="color:blue;">토</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="color:blue;">1</td>
+        </tr>
+        <tr>
+            <td style="color:red;">2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td style="color:blue;">8</td>
+        </tr>
+        <tr>
+            <td style="color:red;">9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+            <td>14</td>
+            <td style="color:blue;">15</td>
+        </tr>
+        <tr>
+            <td style="color:red;">16</td>
+            <td>17</td>
+            <td>18</td>
+            <td>19</td>
+            <td>20</td>
+            <td>21</td>
+            <td style="color:blue;">22</td>
+        </tr>
+        <tr>
+            <td style="color:red;">23</td>
+            <td>24</td>
+            <td>25</td>
+            <td>26</td>
+            <td>27</td>
+            <td>28</td>
+            <td style="color:blue;">29</td>
+        </tr>
+        <tr>
+            <td style="color:red;">30</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+
+    <table border="1" cellpadding="50">
+        <tr>
+            <th style="color:red;">월</th>
+            <th style="color:red;">화</th>
+            <th style="color:red;">수</th>
+            <th style="color:red;">목</th>
+            <th style="color:red;">금</th>
+            <th style="color:red;">토</th>
+        </tr>
+        <tr>
+            <td style="color: green;">1교시</td>
+            <td> <img src="./image/korea_seoul_thanksoat_1.jpg" width="60" height="40" alt=""></td>
+            <td> <img src="./image/korea_seoul_thanksoat_1.jpg" width="60" height="40" alt=""></td>
+            <td> <img src="./image/korea_seoul_thanksoat_1.jpg" width="60" height="40" alt=""></td>
+            <td> <img src="./image/korea_seoul_thanksoat_1.jpg" width="60" height="40" alt=""></td>
+            <td> <img src="./image/korea_seoul_thanksoat_1.jpg" width="60" height="40" alt=""></td>
+        </tr>
+        <tr>
+            <td style="color: green;">2교시</td>
+            <td> <img src="./image/고양이.jpg" width="60" height="30" alt=""></imG></td>
+            <td> <img src="./image/고양이.jpg" width="60" height="30" alt=""></td>
+            <td> <img src="./image/고양이.jpg" width="60" height="30" alt=""></td>
+            <td> <img src="./image/고양이.jpg" width="60" height="30" alt=""></td>
+            <td> <img src="./image/고양이.jpg" width="60" height="30" alt=""></td>
+        </tr>
+        <tr>
+            <td style="color: green;">3교시</td>
+            <td> <img src="./image/image.png" width="60" height="30 alt="></td>
+            <td> <img src="./image/image.png" width="60" height="30 alt="></td>
+            <td> <img src="./image/image.png" width="60" height="30 alt="></td>
+            <td> <img src="./image/image.png" width="60" height="30 alt="></td>
+            <td> <img src="./image/image.png" width="60" height="30 alt="></td>
+        </tr>
+        <tr>
+            <td style="color: green;">4교시</td>
+            <td> <img src="./image/캡처.PNG" width="60" height="30" alt=""></td>
+            <td> <img src="./image/캡처.PNG" width="60" height="30" alt=""></td>
+            <td> <img src="./image/캡처.PNG" width="60" height="30" alt=""></td>
+            <td> <img src="./image/캡처.PNG" width="60" height="30" alt=""></td>
+            <td> <img src="./image/캡처.PNG" width="60" height="30" alt=""></td>
+        </tr>
+        <tr>
+            <td colspan="6" height="10"> <a href="https://www.youtube.com/watch?v=ijUsSpRVhBU"> <img
+                        src="https://i.namu.wiki/i/nDdQBd5RiUXUFdFgNFMi1e-Yj5wxDK8faZqz-DVDaJgIj0ZNe-omEo1bhSOqT8svgZkBlWp2ZaOTGL4TsNDJjQ.svg"
+                        width="1000" height="50" alt=""> </a> </td>
+        </tr>
+        <tr>
+            <td style="color: green;">5교시</td>
+            <td> <img src="./image/고양이.jpg" width="60" height="30" alt=""> </td>
+            <td> <img src="./image/고양이.jpg" width="60" height="30" alt=""> </td>
+            <td> <img src="./image/고양이.jpg" width="60" height="30" alt=""> </td>
+            <td> <img src="./image/고양이.jpg" width="60" height="30" alt=""> </td>
+            <td> <img src="./image/고양이.jpg" width="60" height="30" alt=""> </td>
+        </tr>
+        <tr>
+            <td style="color: green;">6교시</td>
+            <td> <img src="./image/korea_seoul_thanksoat_1.jpg" width="40" height="30" alt=""></td>
+            <td> <img src="./image/korea_seoul_thanksoat_1.jpg" width="40" height="30" alt=""></td>
+            <td> <img src="./image/korea_seoul_thanksoat_1.jpg" width="40" height="30" alt=""></td>
+            <td> <img src="./image/korea_seoul_thanksoat_1.jpg" width="40" height="30" alt=""></td>
+            <td> <img src="./image/korea_seoul_thanksoat_1.jpg" width="40" height="30" alt=""></td>
+        </tr>
+    </table>
+
+    <br>
+    <br>
+    <br>
+
+
+    <table border="1" cellpadding="50">
+        <tr>
+            <th>구분</th>
+            <th>음료</th>
+            <th>가격</th>
+            <th>이미지</th>
+        </tr>
+        <tr>
+            <td>라떼류</td>
+            <td>
+        <tr>딸기라떼</tr>
+        <tr>옥수수라떼</tr>
+        </td>
+        </tr>
+        <tr>
+            <td>차류</td>
+            <td>
+        <tr>메밀차</tr>
+        <tr>산딸기차</tr>
+        <tr>단감차</tr>
+        </td>
+        </tr>
+    </table>
+</body>
+
+</html>
