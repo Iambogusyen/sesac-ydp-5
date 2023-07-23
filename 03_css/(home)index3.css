@@ -1,0 +1,40 @@
+/* 복합 선택자의 종류
+    - 후손 선택자 (공백)
+    - 자식 선택자 (>)
+    - 인접 형제 선택자 (+)
+    - 일반 형제 선택자 (~)
+    
+    후손 + 자식 + 일반 + 인접 모두 서로 섞어 쓸 수 있다.*/
+
+    div + .lion {
+        background-color: red;
+    }
+
+    .zoo>ul>.lion {
+       background-color: greenyellow;
+    }
+
+    .zoo .lion {
+        font-weight: bolder;
+    }
+
+    #tiger {
+        background-color: yellow;
+    }
+
+    .lion {
+        color: sienna;
+    }
+
+    #tiger + li {
+        background-color: skyblue;
+    }
+
+    ul>.lion+.lion~li {
+        background-color: orange;
+    }
+
+
+   
+   
+ 

@@ -1,0 +1,26 @@
+img {
+    margin-left: 300px;
+    width: 500px;
+    height: 400px;
+    transform: skewY(30deg);
+}
+
+.img1 {
+    position: relative;
+    left:100px;
+    top:500px;
+    z-index: 3;
+}
+
+.img2 {
+    position: relative;
+    left: 300px;
+    z-index: 2;
+}
+
+.img3 {
+    position: relative;
+    top:600px;
+    left: 500px;
+    z-index: 1;
+}
