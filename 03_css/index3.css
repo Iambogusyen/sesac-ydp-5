@@ -1,0 +1,75 @@
+/* 후손 선택자 */
+body section {
+    /* 경계선 : 두께 선 스타일 선 색상 */
+    border: 1px solid blue;
+}
+
+body section h2 {
+    border: 1px solid blue;
+}
+
+/* 자식 선택자 : > */
+
+.first>h2 {
+    color: white;
+    background-color: navy;
+}
+
+.second>h2 {
+    color: navy;
+    background-color: white;
+}
+
+/* 인접 형제 선택자: + */
+/* 주의 ) kong 이라는 아이디를 갖는 요소 바로 뒤에 li 태그가 있어야만 적용 */
+#kong+li {
+    background-color: aqua;
+}
+
+/* 일반 형제 선택자 : ~ */
+/* 얘는 바로 뒤에 있는게 아니더라도 적용이 가능함. */
+#kong~li {
+    color: brown;
+}
+
+/* CSS 색상 */
+
+/*
+
+1. 색상 키워드
+2. 16진수 코드(#xxxxxx)
+    0 ~ 9, a,b,c,d,e,f : 16개의 기호로 표현
+3. RGB(0~255, 0~255, 0~255)
+- rgb(255, 255, 255) : white
+- rgb(0. 0, 0) : black
+
+ 주로 2, 3번 방식을 사용함.
+*/
+
+.zoo+.lion {
+    background-color: red;
+}
+
+ul>.lion {
+    background-color: greenyellow;
+}
+
+.zoo #tiger {
+    background-color: yellow;
+}
+
+.lion {
+    color: sienna;
+}
+
+.zoo .lion {
+    font-weight: bolder;
+}
+
+#tiger+li {
+    background-color: skyblue;
+}
+
+.zoo li.lion~li {
+    background-color: orange;
+}
