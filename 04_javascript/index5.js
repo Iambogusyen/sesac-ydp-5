@@ -116,6 +116,8 @@ const myHello2 = function () {
   console.log('hello~~~~2');
 };
 
+// 매개변수 두개인 리턴함수 선언과 호출
+
 function multiply(Number1, Number2) {
   return Number1 * Number2;
 }
