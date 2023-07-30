@@ -89,3 +89,95 @@ console.log(arr2.join('-'));
 console.log('hello'.split(''));
 console.log('hello'.split('').reverse());
 console.log('hello'.split('').reverse().join(''));
+
+/////////////////////////////////////////////////
+
+// - 배열에서 반복문 사용하기!
+// - 기본 for 문
+// - for of 문
+// - forEach() 메서드
+
+const arr3 = [1, 2, 3, 5, 6, 7];
+const alphabets = ['a', 'b', 'c', 'd'];
+
+for (let a = 0; a < arr3.length; a++) {
+  console.log(arr3[a]);
+}
+
+for (let alpha of alphabets) {
+  console.log(alpha);
+}
+
+alphabets.forEach(function (alpha, idx, arr) {
+  // alpha: currentValue를 의미. 반복하고 있는 현재 요소
+  // idx: currentValue의 인덱스(위치)
+  // arr: forEach를 호출한 배열
+  console.log(alpha, idx, arr);
+});
+
+let numbers = [1, 2, 3, 4, 5, 6];
+var sum1 = 0;
+var sum2 = 0;
+var sum3 = 0;
+
+// for (let i = 0; i < numbers.length; i++) {
+//   console.log(nunbers[i]);
+//   sum1 += numbers[i];
+// }
+
+for (let num of numbers) {
+  sum2 += num;
+}
+
+// numbers.forEach((num) {
+//     sum3 += num;
+// })
+
+console.log('------');
+
+// map, filter, find 메서드
+const arr4 = [1, 2, 3, 4, 5];
+
+// map(): 배열 내 모든 원소에 대해 연산한 결과를 모아 "새로운 배열" 반환
+
+// 화살표함수는 function 생략, return 값 생략
+
+// const mapResult = arr4.map(function (e) {
+//   return e * 2;
+// }) -> 이거를
+
+const mapResult = arr4.map((e) => e * 2);
+console.log(mapResult); // 이렇게 쓸수 있음
+
+// filter(): 주어진 함수의 테스트(조건)를 통과하는 요소를 모아
+// (조건 통과하면 요소 유지, 미통과하면 요소 버림) "새로운 배열" 반환
+
+// const filterResult = arr4.filter(function (e) {
+//   return e > 2;
+// }); -> 이거를
+
+const filterResult = arr4.filter((e) => e > 2);
+console.log(filterResult); // 이렇게 쓸 수 있음
+
+// find() : 특정 조건을 만족하는 첫번째 요소 반환
+const findResult = arr4.find((e) => e > 2);
+console.log(findResult);
+
+const words = ['dog', 'cat', 'rebbit', 'apple', 'wow'];
+
+const wordsThree = words.filter((word) => word.length > 3);
+console.log(wordsThree);
+
+const wordsA = words.filter((word) => word.includes('a'));
+console.log(wordsA);
+
+////////////////////////////////////////
+// for in 반복문
+// 객체의 key를 반복할 수 있는 구문
+
+const me = { name: 'yeeun', gender: 'f', hobby: 'movie' };
+for (let key in me) {
+  console.log(key);
+  // key : key
+  // value : me[key]
+}
