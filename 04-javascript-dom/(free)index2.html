@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>방명록</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        border: 1px solid black;
+      }
+
+      th,
+      td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>방명록</h1>
+    <label for="name">작성자 이름: </label>
+    <input type="text" id="name" />
+    <br />
+    <label for="message">내용: </label>
+    <textarea id="message" rows="4"></textarea>
+    <br />
+    <button onclick="addEntry()">추가</button>
+    <br />
+    <table id="guestbookTable">
+      <tr>
+        <th>번호</th>
+        <th>작성자</th>
+        <th>내용</th>
+        <th>작성일</th>
+      </tr>
+    </table>
+  </body>
+  <script>
+    function addEntry() {
+      const name = document.getElementById('name').value;
+      const message = document.getElementById('message').value;
+      const date = new Date().toLocaleString();
+
+      if (!name || !message) {
+        alert('작성자 이름과 내용을 모두 입력해주세요.');
+        return;
+      }
+
+      const table = document.getElementById('guestbookTable');
+      const rowCount = table.rows.length;
+      const newRow = table.insertRow(rowCount);
+
+      const numberCell = newRow.insertCell(0);
+      numberCell.textContent = rowCount;
+
+      const nameCell = newRow.insertCell(1);
+      nameCell.textContent = name;
+
+      const messageCell = newRow.insertCell(2);
+      messageCell.textContent = message;
+
+      const dateCell = newRow.insertCell(3);
+      dateCell.textContent = date;
+
+      document.getElementById('name').value = '';
+      document.getElementById('message').value = '';
+    }
+  </script>
+</html>
